@@ -35,4 +35,18 @@ function deleteInvalids(array) {
   return "Invalid Array";
 }
 
-// 
+// Make A Great Password
+
+function password(obj) {
+  if (
+    typeof obj === "object" &&
+    typeof obj.siteName === "string" &&
+    typeof obj.name === "string" &&
+    typeof obj.birthYear === "number" &&
+    obj.birthYear.toString().length === 4
+  ) {
+    const password = obj.siteName + "#" + obj.name + "@" + obj.birthYear;
+    return password;
+  }
+  return "invalid";
+}
