@@ -20,4 +20,19 @@ function checkName(name) {
   return "Bad name";
 }
 
+// Virus in my Array
+
+function deleteInvalids(array) {
+  let numArray = [];
+  if (Array.isArray(array)) {
+    for (let arr of array) {
+      if (typeof arr === "number" && !isNaN(arr)) {
+        numArray.push(arr);
+      }
+    }
+    return numArray;
+  }
+  return "Invalid Array";
+}
+
 // 
