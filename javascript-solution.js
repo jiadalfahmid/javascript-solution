@@ -50,3 +50,22 @@ function password(obj) {
   }
   return "invalid";
 }
+
+// Monthly Saving Calculator
+
+function monthlySavings(arr, livingCost) {
+  if (Array.isArray(arr) && typeof livingCost === "number") {
+    let sum = 0;
+    for (let earn of arr) {
+      if (earn >= 3000) {
+        earn = earn - earn * 0.2;
+      }
+      sum += earn;
+    }
+    if (sum < livingCost) {
+      return "earn more";
+    }
+    return sum - livingCost;
+  }
+  return "invalid input";
+}
